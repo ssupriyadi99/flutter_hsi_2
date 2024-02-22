@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hsi_2/CommonBar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_hsi_2/profile_page.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart' as local;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -34,7 +35,7 @@ class _MainAppState extends State<MainApp> {
     _appBars = [appBar1, appBar1, appBar1, CommonBar().profileAppBar()];
 
     Widget homePage = buildMainBody();
-    _pages = [homePage, homePage, homePage, CommonBar().buildProfileWidget()];
+    _pages = [homePage, homePage, homePage, ProfilePage().buildProfileWidget()];
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

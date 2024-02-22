@@ -1,26 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hsi_2/CommonBar.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
-void main() {
-  runApp(const ProfilePage());
-}
-
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: CommonBar().profileAppBar(),
-        body: buildProfileWidget(),
-        bottomNavigationBar: CommonBar().bottomNav(),
-      ),
-    );
-  }
-
+class ProfilePage {
   Widget buildProfileWidget() {
     return ListView(
       shrinkWrap: true,
@@ -39,9 +20,17 @@ class ProfilePage extends StatelessWidget {
               ),
               title: Text(
                 "SUPRIYADI",
+                style: TextStyle(
+                  fontFamily: "Plus Jakarta Sans",
+                  fontWeight: FontWeight.w900,
+                  fontSize: 15,
+                ),
               ),
               subtitle: Text(
                 "ARN231-33151",
+                style: TextStyle(
+                  fontFamily: "Plus Jakarta Sans",
+                ),
               ),
               trailing: ElevatedButton.icon(
                 onPressed: () {},
@@ -59,32 +48,72 @@ class ProfilePage extends StatelessWidget {
                 AssetImage("assets/icons/whatsapp_6422213.png"),
                 color: Colors.black,
               ),
-              title: Text("Nomor Whatsapp"),
-              subtitle: Text("62-81567999999"),
+              title: Text(
+                "Nomor Whatsapp",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "62-81567999999",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
             const ListTile(
               leading: Icon(
                 Icons.home,
                 color: Colors.black,
               ),
-              title: Text("Alamat"),
-              subtitle: Text("Bintaro, Pondok Aren, Tangerang Selatan"),
+              title: Text(
+                "Alamat",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "Bintaro, Pondok Aren, Tangerang Selatan",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
             const ListTile(
               leading: ImageIcon(
                 AssetImage("assets/icons/location.png"),
                 color: Colors.black,
               ),
-              title: Text("Kabupaten/Kota, Provinsi, Kode Pos"),
-              subtitle: Text("Tangerang Selatan, Banten 15225"),
+              title: Text(
+                "Kabupaten/Kota, Provinsi, Kode Pos",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "Tangerang Selatan, Banten 15225",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
             const ListTile(
               leading: ImageIcon(
                 AssetImage("assets/icons/ring_5446974.png"),
                 color: Colors.black,
               ),
-              title: Text("Status Pernikahan / Jumlah Anak"),
-              subtitle: Text("Menikah / 2"),
+              title: Text(
+                "Status Pernikahan / Jumlah Anak",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "Menikah / 2",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
             const ListTile(
               leading: Icon(
@@ -171,6 +200,7 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
+            const Divider(),
             const ListTile(
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
