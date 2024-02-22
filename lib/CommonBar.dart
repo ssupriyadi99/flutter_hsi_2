@@ -1,0 +1,512 @@
+import 'package:flutter/material.dart';
+
+class CommonBar {
+  AppBar headerAppBar() {
+    return AppBar(
+      backgroundColor: Color.fromARGB(255, 2, 71, 126),
+      leading: const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Image(
+          image: AssetImage("assets/images/logo-hsi.png"),
+        ),
+      ),
+      title: const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              "EDU HSI",
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: "Plus Jakarta Sans",
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              ),
+            ),
+            Text(
+              "v.2402-1601",
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: "Plus Jakarta Sans",
+                fontSize: 14,
+              ),
+              textAlign: TextAlign.end,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  AppBar profileAppBar() {
+    return AppBar(
+      backgroundColor: Colors.white,
+      title: const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              "Profil",
+              style: TextStyle(
+                fontFamily: "Plus Jakarta Sans",
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              "v.2402-1601",
+              style: TextStyle(
+                fontFamily: "Plus Jakarta Sans",
+                fontSize: 14,
+              ),
+              textAlign: TextAlign.end,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  BottomNavigationBar bottomNav() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      selectedFontSize: 10,
+      unselectedFontSize: 10,
+      iconSize: 18,
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home,
+            color: Colors.black,
+          ),
+          label: 'Beranda',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.school,
+            color: Colors.black,
+          ),
+          label: 'Akademi',
+        ),
+        BottomNavigationBarItem(
+          // icon: Icon(
+          //   Icons.edit_document,
+          //   color: Colors.black,
+          // ),
+          icon: ImageIcon(AssetImage("assets/icons/document.png")),
+          label: 'Reguler',
+        ),
+        BottomNavigationBarItem(
+          icon: ImageIcon(AssetImage("assets/icons/profile_13864389.png")),
+          label: 'Profil',
+        ),
+      ],
+    );
+  }
+
+  Widget buildProfileWidget() {
+    return ListView(
+      shrinkWrap: true,
+      padding: const EdgeInsets.all(8.0),
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ListTile(
+              leading: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Image(
+                  image: AssetImage("assets/images/logo-hsi.png"),
+                ),
+              ),
+              title: Text(
+                "SUPRIYADI",
+                style: TextStyle(
+                  fontFamily: "Plus Jakarta Sans",
+                  fontWeight: FontWeight.w900,
+                  fontSize: 15,
+                ),
+              ),
+              subtitle: Text(
+                "ARN231-33151",
+                style: TextStyle(
+                  fontFamily: "Plus Jakarta Sans",
+                ),
+              ),
+              trailing: ElevatedButton.icon(
+                onPressed: () {},
+                icon: ImageIcon(AssetImage("assets/icons/edit_doc2.png")),
+                label: Text("Ubah"),
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                )),
+              ),
+            ),
+            const Divider(),
+            const ListTile(
+              leading: ImageIcon(
+                AssetImage("assets/icons/whatsapp_6422213.png"),
+                color: Colors.black,
+              ),
+              title: Text(
+                "Nomor Whatsapp",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "62-81567999999",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Colors.black,
+              ),
+              title: Text(
+                "Alamat",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "Bintaro, Pondok Aren, Tangerang Selatan",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: ImageIcon(
+                AssetImage("assets/icons/location.png"),
+                color: Colors.black,
+              ),
+              title: Text(
+                "Kabupaten/Kota, Provinsi, Kode Pos",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "Tangerang Selatan, Banten 15225",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: ImageIcon(
+                AssetImage("assets/icons/ring_5446974.png"),
+                color: Colors.black,
+              ),
+              title: Text(
+                "Status Pernikahan / Jumlah Anak",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+              subtitle: Text(
+                "Menikah / 2",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.headset_mic,
+                color: Colors.black,
+              ),
+              title: Text(
+                "List Admin",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            const ListTile(
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "RAHMAN SYARIF",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "(ARN201-34049)",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              title: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Silsilah Ilmiyyah 2-4 : Mengenal Allah, Rasulullah shalallahu'alayhi wa sallam & Islam",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                  ),
+                  Text(
+                    "Group: ARN231-25",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Program Reguler",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 15,
+                    ),
+                  ),
+                  Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: const ImageIcon(
+                        AssetImage("assets/icons/whatsapp_6422213.png"),
+                        color: Colors.white,
+                      ),
+                      label: const Text(
+                        "Hubungi",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(),
+            const ListTile(
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Joko Dewanto",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "(ARN202-99999)",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              title: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Silsilah Ilmiyyah 2-4 : Mengenal Allah, Rasulullah shalallahu'alayhi wa sallam & Islam",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                  ),
+                  Text(
+                    "Group: ARN231-25",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Program Reguler",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 15,
+                    ),
+                  ),
+                  Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: const ImageIcon(
+                        AssetImage("assets/icons/whatsapp_6422213.png"),
+                        color: Colors.white,
+                      ),
+                      label: const Text(
+                        "Hubungi",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.info,
+                color: Color.fromRGBO(13, 71, 161, 1),
+              ),
+              title: Text("Info Lainnya"),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.lock_open,
+                          color: Colors.black,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        const Text(
+                          "Ganti Password",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.black,
+                    ),
+                  ]),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.help_outline,
+                          color: Colors.black,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        const Text(
+                          "Bantuan",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.black,
+                    ),
+                  ]),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.shield_outlined,
+                          color: Colors.black,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        const Text(
+                          "Kebijakan Privasi",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.black,
+                    ),
+                  ]),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+              ),
+            ),
+            ListTile(
+              title: ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  "Keluar",
+                  style: TextStyle(color: Colors.red),
+                ),
+                style: ElevatedButton.styleFrom(
+                  side: BorderSide(
+                    width: 1,
+                    color: Colors.red,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
