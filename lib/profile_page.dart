@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hsi_2/CommonBar.dart';
 
 class ProfilePage {
   Widget buildProfileWidget() {
